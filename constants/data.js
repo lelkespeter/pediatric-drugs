@@ -74,7 +74,7 @@ export const DRUGS = [
   },
   {
     drugId: "m10",
-    catId: ["c5"],
+    catId: ["c2"],
     drugName: "Robinul",
     styrka: "0.2 mg/ml",
     dosIµG: 10,

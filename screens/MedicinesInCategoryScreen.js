@@ -5,14 +5,21 @@ import {DRUGS} from "../constants/data";
 import DrugItem from "../components/DrugItem";
 
 const MedicinesInCategoryScreen = ({route}) => {
-  katId = route.params.kategoriId;
+  const categoryId = route.params.kategoriId;
 
   const displayedDrugs = DRUGS.filter((lmItem) => {
-    return lmItem.kategoriIds?.includes(katId) >= 0;
+    return lmItem.catId.includes(categoryId);
   });
 
+  console.log("displayedDrugs", displayedDrugs);
+
   function renderDrug(itemData) {
-    return <DrugItem drugName={itemData.item.drugName} />;
+    return (
+      <DrugItem
+        drugName={itemData.item.drugName}
+        styrka={itemData.item.styrka}
+      />
+    );
   }
 
   return (
