@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MedicinesInCategoryScreen from "./screens/MedicinesInCategoryScreen";
+import {GlobalStyles} from "./constants/appColors";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,20 @@ export default function App() {
     <>
       <StatusBar style="light" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Kategorier" component={CategoriesScreen} />
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {backgroundColor: GlobalStyles.colors.darkgreen},
+            headerTintColor: "white",
+            contentStyle: {backgroundColor: "#094609"},
+          }}
+        >
+          <Stack.Screen
+            name="Kategorier"
+            component={CategoriesScreen}
+            options={{
+              title: "Kategorier av läkemedel",
+            }}
+          />
           <Stack.Screen name="List" component={MedicinesInCategoryScreen} />
         </Stack.Navigator>
       </NavigationContainer>

@@ -11,8 +11,6 @@ const MedicinesInCategoryScreen = ({route}) => {
     return lmItem.catId.includes(categoryId);
   });
 
-  console.log("displayedDrugs", displayedDrugs);
-
   function renderDrug(itemData) {
     return (
       <DrugItem

@@ -2,7 +2,7 @@ export const GlobalStyles = {
   colors: {
     error: "#9b095c",
     neon: "#0FFF50",
-    darkgreen: `#032503`,
+    darkgreen: `#022302`,
     grey: "#808080",
     darkgrey: "#808080",
     lightgray: `#d3d3d3`,
