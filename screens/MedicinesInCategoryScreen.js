@@ -18,6 +18,7 @@ const MedicinesInCategoryScreen = ({route}) => {
       <DrugItem
         drugName={itemData.item.drugName}
         styrka={itemData.item.styrka}
+        catId={itemData.item.catId}
       />
     );
   }

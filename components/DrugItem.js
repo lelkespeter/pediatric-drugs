@@ -1,10 +1,11 @@
 import {Alert, Pressable, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
-const DrugItem = ({drugName, styrka}) => {
+const DrugItem = ({drugName, styrka, catId}) => {
   return (
     <>
       <View style={styles.outerContainer}>
+        <Text>{catId}</Text>
         <Pressable onPress={() => console.log("Pressed")}>
           <View style={styles.itemContainer}>
             <Text>{drugName}</Text>
