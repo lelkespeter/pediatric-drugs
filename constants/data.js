@@ -47,15 +47,9 @@ export const DRUGS = [
     drugName: "Atropin",
     styrka: "0.5 mg/ml",
     dosIµG: 10,
+    dosIµG_2: 20,
     obs: "maximalt 1 ml",
-  },
-  {
-    drugId: "m7",
-    catId: ["c5"],
-    drugName: "Atropin",
-    styrka: "0.5 mg/ml",
-    dosIµG: 20,
-    obs: "Reversering",
+    obs_2: "Reversering. MAXDOS 2 ml",
   },
 
   {

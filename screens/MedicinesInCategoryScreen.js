@@ -23,13 +23,15 @@ const MedicinesInCategoryScreen = ({route, navigation}) => {
   }, [navigation, categoryId]);
 
   function renderDrug(itemData) {
-    return (
-      <DrugItem
-        drugName={itemData.item.drugName}
-        styrka={itemData.item.styrka}
-        catId={itemData.item.catId}
-      />
-    );
+    const item = itemData.item;
+
+    const drugItemProps = {
+      id: item.drugId,
+      drugName: item.drugName,
+      styrka: item.styrka,
+    };
+
+    return <DrugItem {...drugItemProps} />;
   }
 
   return (

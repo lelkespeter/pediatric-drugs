@@ -7,6 +7,7 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MedicinesInCategoryScreen from "./screens/MedicinesInCategoryScreen";
 import {GlobalStyles} from "./constants/appColors";
+import ListSlectedDrugsScreen from "./screens/ListSlectedDrugsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ export default function App() {
             }}
           />
           <Stack.Screen name="List" component={MedicinesInCategoryScreen} />
+          <Stack.Screen name="Valda" component={ListSlectedDrugsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

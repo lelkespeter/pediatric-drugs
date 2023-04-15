@@ -1,13 +1,23 @@
 import {Alert, Platform, Pressable, StyleSheet, Text, View} from "react-native";
 import React from "react";
+import {useNavigation} from "@react-navigation/native";
 
-const DrugItem = ({drugName, styrka, catId}) => {
+const DrugItem = ({drugName, styrka, id}) => {
+  const navig = useNavigation();
+
+  function selectHandler() {
+    navig.navigate("Valda", {
+      drugId: id,
+    });
+  }
+
   return (
     <>
       <View style={styles.outerContainer}>
         <Pressable
           android_ripple={{color: "#ccc"}}
           style={({pressed}) => (pressed ? styles.buttonPressed : null)}
+          onPress={selectHandler}
         >
           <View style={styles.innerContainer}>
             <Text style={styles.text}>
