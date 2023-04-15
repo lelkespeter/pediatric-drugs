@@ -31,7 +31,13 @@ export default function App() {
             }}
           />
           <Stack.Screen name="List" component={MedicinesInCategoryScreen} />
-          <Stack.Screen name="Valda" component={ListSlectedDrugsScreen} />
+          <Stack.Screen
+            name="Valda"
+            component={ListSlectedDrugsScreen}
+            options={{
+              title: "Valda läkemedel",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
