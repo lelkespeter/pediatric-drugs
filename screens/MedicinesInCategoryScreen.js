@@ -4,6 +4,7 @@ import React, {useEffect, useLayoutEffect} from "react";
 import {DRUGS} from "../constants/data";
 import DrugItem from "../components/DrugItem";
 import {LMCategory} from "../constants/kategorier";
+import WeightInput from "../components/WeightInput";
 
 const MedicinesInCategoryScreen = ({route, navigation}) => {
   const categoryId = route.params.kategoriId;
@@ -35,13 +36,16 @@ const MedicinesInCategoryScreen = ({route, navigation}) => {
   }
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={displayedDrugs}
-        keyExtractor={(item) => item.drugId}
-        renderItem={renderDrug}
-      />
-    </View>
+    <>
+      <WeightInput />
+      <View style={styles.container}>
+        <FlatList
+          data={displayedDrugs}
+          keyExtractor={(item) => item.drugId}
+          renderItem={renderDrug}
+        />
+      </View>
+    </>
   );
 };
 

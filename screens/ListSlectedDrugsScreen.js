@@ -4,6 +4,7 @@ import React from "react";
 import {DRUGS} from "../constants/data";
 import DoseInMl from "../villkor/DoseInMl";
 import QuantityToGive from "../villkor/QuantityToGive";
+import WeightInput from "../components/WeightInput";
 
 const ListSlectedDrugsScreen = ({route}) => {
   const drugId = route.params.drugId;
@@ -16,6 +17,7 @@ const ListSlectedDrugsScreen = ({route}) => {
 
   return (
     <>
+      <WeightInput />
       <View style={styles.container}>
         <View>
           <Text style={{color: "white"}}>

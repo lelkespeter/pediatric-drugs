@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from "react-native";
 
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import {AppContextProvider} from "./context/AppContext";
+import AppContextProvider from "./context/AppContext";
 
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MedicinesInCategoryScreen from "./screens/MedicinesInCategoryScreen";

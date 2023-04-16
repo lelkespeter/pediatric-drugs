@@ -1,19 +1,26 @@
 import {Pressable, StyleSheet, Text, View, Platform} from "react-native";
 import React from "react";
 
+import WeightInput from "./WeightInput";
+
 const CategoryItem = ({catName, onPress}) => {
   return (
-    <View style={styles.outerContainer}>
-      <Pressable
-        android_ripple={{color: "#808080"}}
-        style={({pressed}) => [styles.btn, pressed ? styles.btnPressed : null]}
-        onPress={onPress}
-      >
-        <View style={styles.innerContainer}>
-          <Text style={styles.nameText}>{catName}</Text>
-        </View>
-      </Pressable>
-    </View>
+    <>
+      <View style={styles.outerContainer}>
+        <Pressable
+          android_ripple={{color: "#808080"}}
+          style={({pressed}) => [
+            styles.btn,
+            pressed ? styles.btnPressed : null,
+          ]}
+          onPress={onPress}
+        >
+          <View style={styles.innerContainer}>
+            <Text style={styles.nameText}>{catName}</Text>
+          </View>
+        </Pressable>
+      </View>
+    </>
   );
 };
 
