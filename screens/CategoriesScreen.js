@@ -1,9 +1,10 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
-import React from "react";
+import {useLayoutEffect} from "react";
 
 import {LMCategory} from "../constants/kategorier";
 import CategoryItem from "../components/CategoryItem";
 import WeightInput from "../components/WeightInput";
+import IconButton from "../components/IconButton";
 
 const CategoriesScreen = ({navigation}) => {
   const renderCategoryItem = (itemData) => {
@@ -12,6 +13,18 @@ const CategoriesScreen = ({navigation}) => {
         kategoriId: itemData.item.catId,
       });
     }
+
+    function iconPresssHandler() {
+      console.log("pressed!!");
+    }
+
+    // useLayoutEffect(() => {
+    //   navigation.setOptions({
+    //     headerRight: () => {
+    //       return <IconButton onPress={iconPresssHandler} />;
+    //     },
+    //   });
+    // }, [navigation, iconPresssHandler]);
 
     return (
       <CategoryItem catName={itemData.item.catName} onPress={pressHandler} />

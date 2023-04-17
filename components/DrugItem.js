@@ -14,6 +14,7 @@ const DrugItem = ({drugName, styrka, id}) => {
   return (
     <>
       <View style={styles.outerContainer}>
+        <Text>knapp</Text>
         <Pressable
           android_ripple={{color: "#ccc"}}
           style={({pressed}) => (pressed ? styles.buttonPressed : null)}

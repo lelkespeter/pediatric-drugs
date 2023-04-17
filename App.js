@@ -9,6 +9,7 @@ import CategoriesScreen from "./screens/CategoriesScreen";
 import MedicinesInCategoryScreen from "./screens/MedicinesInCategoryScreen";
 import {GlobalStyles} from "./constants/appColors";
 import ListSlectedDrugsScreen from "./screens/ListSlectedDrugsScreen";
+import IconButton from "./components/IconButton";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,9 @@ export default function App() {
               component={ListSlectedDrugsScreen}
               options={{
                 title: "Valda läkemedel",
+                headerRight: () => {
+                  return <IconButton />;
+                },
               }}
             />
           </Stack.Navigator>

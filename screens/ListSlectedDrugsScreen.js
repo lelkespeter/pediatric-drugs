@@ -17,7 +17,6 @@ const ListSlectedDrugsScreen = ({route}) => {
 
   return (
     <>
-      <WeightInput />
       <View style={styles.container}>
         <View>
           <Text style={{color: "white"}}>
