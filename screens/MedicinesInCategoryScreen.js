@@ -1,13 +1,15 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
-import React, {useEffect, useLayoutEffect} from "react";
+import React, {useContext, useEffect, useLayoutEffect} from "react";
 
 import {DRUGS} from "../constants/data";
 import DrugItem from "../components/DrugItem";
 import {LMCategory} from "../constants/kategorier";
 import WeightInput from "../components/WeightInput";
 import IconButton from "../components/IconButton";
+import {AppContext} from "../context/AppContext";
 
 const MedicinesInCategoryScreen = ({route, navigation, onPress}) => {
+  const {handlePress, selected} = useContext(AppContext);
   const categoryId = route.params.kategoriId;
 
   const displayedDrugs = DRUGS.filter((lmItem) => {

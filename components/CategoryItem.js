@@ -1,7 +1,10 @@
 import {Pressable, StyleSheet, Text, View, Platform} from "react-native";
-import React from "react";
+import React, {useContext} from "react";
+import WeightInput from "./WeightInput";
+import {AppContext} from "../context/AppContext";
 
 const CategoryItem = ({catName, onPress}) => {
+  const {onAddSelected} = useContext(AppContext);
   return (
     <>
       <View style={styles.outerContainer}>

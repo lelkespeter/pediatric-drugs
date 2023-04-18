@@ -1,14 +1,15 @@
 import {StyleSheet, Text, View} from "react-native";
-import React from "react";
+import React, {useContext} from "react";
 
 import {DRUGS} from "../constants/data";
 import DoseInMl from "../villkor/DoseInMl";
 import QuantityToGive from "../villkor/QuantityToGive";
-import WeightInput from "../components/WeightInput";
+import {AppContext} from "../context/AppContext";
 import NoMedicinesSelected from "../components/NoMedicinesSelected";
 
 const ListSlectedDrugsScreen = ({route}) => {
   const drugId = route.params?.drugId;
+  const {handlePress, selected} = useContext(AppContext);
 
   if (!drugId) {
     return <NoMedicinesSelected />;

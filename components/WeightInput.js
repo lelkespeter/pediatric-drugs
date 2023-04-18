@@ -7,15 +7,17 @@ const WeightInput = () => {
   const {weight, weightInputHandler} = useContext(AppContext);
   return (
     <>
-      <TextInput
-        style={styles.input}
-        onChangeText={weightInputHandler}
-        value={weight}
-        placeholder="vikt i Kg"
-        keyboardType="decimal-pad"
-      />
-      <View style={{marginVertical: 7}}>
-        <Text style={{color: "white"}}>{weight}</Text>
+      <View style={{marginTop: 7}}>
+        <View style={{marginBottom: 5}}>
+          <Text style={{color: "white"}}>Vikt:</Text>
+        </View>
+        <TextInput
+          style={styles.input}
+          onChangeText={weightInputHandler}
+          value={weight}
+          placeholder="vikt i Kg"
+          keyboardType="decimal-pad"
+        />
       </View>
     </>
   );
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
     height: 40,
     marginTop: 3,
     marginBottom: 11,
-    marginHorizontal: 17,
+    marginHorizontal: 33,
     borderWidth: 1,
     backgroundColor: "white",
     padding: 10,
