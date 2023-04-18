@@ -1,8 +1,6 @@
 import {Pressable, StyleSheet, Text, View, Platform} from "react-native";
 import React from "react";
 
-import WeightInput from "./WeightInput";
-
 const CategoryItem = ({catName, onPress}) => {
   return (
     <>

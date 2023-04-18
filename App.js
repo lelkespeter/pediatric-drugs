@@ -39,9 +39,6 @@ export default function App() {
               component={ListSlectedDrugsScreen}
               options={{
                 title: "Valda läkemedel",
-                headerRight: () => {
-                  return <IconButton />;
-                },
               }}
             />
           </Stack.Navigator>

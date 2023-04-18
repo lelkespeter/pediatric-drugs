@@ -20,25 +20,25 @@ const DoseInMl = (seledtedDrugs) => {
   let lm;
 
   if (c4 && c3 >= 1) {
-    lm = "1 ml";
+    lm = "ge 1 ml iv";
   } else if (c5 && c3 >= 2) {
-    lm = " 2 ml";
+    lm = "ge 2 ml iv";
   } else if (c6 && c3 >= 0.5) {
-    lm = "give 0.5 ml";
+    lm = "ge 0.5 ml iv";
   } else if (c1 && c7) {
-    lm = `ge ${c9.toFixed(2)} ml`;
+    lm = `ge ${c9.toFixed(2)} ml iv`;
   } else if (c1 && c2) {
-    lm = `ge ${c3.toFixed(2)} ml`;
+    lm = `ge ${c3.toFixed(2)} ml iv`;
   } else if (c10 && c8) {
-    lm = `ge ${c99.toFixed(2)} ml`;
+    lm = `ge ${c99.toFixed(2)} ml iv`;
   } else if (!c1 && c7) {
-    lm = `ge ${c12.toFixed(2)} ml`;
+    lm = `ge ${c12.toFixed(2)} ml ${c7 === 5 ? "per os" : "iv"}`;
   } else if (c10 && c99 >= 2) {
-    lm = " 2 ml";
+    lm = "ge 2 ml iv";
   } else if (c10 && c9 >= 1) {
-    lm = " 1 ml";
+    lm = "ge 1 ml";
   } else {
-    lm = `ge ${c9.toFixed(2)} ml`;
+    lm = `ge ${c9.toFixed(2)} ml iv`;
   }
 
   return lm;

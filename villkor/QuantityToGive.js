@@ -17,11 +17,11 @@ const QuantityToGive = (seledtedDrugs) => {
   let dos;
 
   if (c1 && c4) {
-    dos = `dos:  ${(c4 * w).toFixed(0)} ${!c1 ? "µg" : null}`;
+    dos = `dos:  ${(c4 * w).toFixed(0)} ${c4 ? "µg" : null}`;
   } else if (c1 && c2) {
-    dos = `dos:  ${(c2 * w).toFixed(0)} ${c1 ? "mg" : null}`;
+    dos = `dos:  ${(c2 * w).toFixed(0)} ${c2 ? "mg" : null}`;
   } else {
-    dos = `dos: ${(c4 * w).toFixed(0)} ${!c1 ? "µg" : null}`;
+    dos = `dos: ${(c4 * w).toFixed(0)} ${c4 ? "µg" : null}`;
   }
 
   return dos;

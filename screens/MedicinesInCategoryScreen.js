@@ -5,13 +5,18 @@ import {DRUGS} from "../constants/data";
 import DrugItem from "../components/DrugItem";
 import {LMCategory} from "../constants/kategorier";
 import WeightInput from "../components/WeightInput";
+import IconButton from "../components/IconButton";
 
-const MedicinesInCategoryScreen = ({route, navigation}) => {
+const MedicinesInCategoryScreen = ({route, navigation, onPress}) => {
   const categoryId = route.params.kategoriId;
 
   const displayedDrugs = DRUGS.filter((lmItem) => {
     return lmItem.catId.includes(categoryId);
   });
+
+  const iconPressHandler = () => {
+    navigation.navigate("Valda");
+  };
 
   useLayoutEffect(() => {
     const categoryName = LMCategory.find(
@@ -20,6 +25,9 @@ const MedicinesInCategoryScreen = ({route, navigation}) => {
 
     navigation.setOptions({
       title: categoryName,
+      headerRight: () => {
+        return <IconButton onPress={iconPressHandler} />;
+      },
     });
   }, [navigation, categoryId]);
 

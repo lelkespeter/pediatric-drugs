@@ -4,20 +4,11 @@ import React from "react";
 import {DRUGS} from "../constants/data";
 import DoseInMl from "../villkor/DoseInMl";
 import QuantityToGive from "../villkor/QuantityToGive";
-import WeightInput from "../components/WeightInput";
-import NoMedicinesSelected from "../components/NoMedicinesSelected";
 
-const ListSlectedDrugsScreen = ({route}) => {
-  const drugId = route.params?.drugId;
-
-  if (!drugId) {
-    return <NoMedicinesSelected />;
-  }
+const DrugDetails = ({route}) => {
+  const drugId = route.params.drugId;
 
   const seledtedDrugs = DRUGS.find((lm) => lm.drugId === drugId);
-  if (!seledtedDrugs) {
-    return <NoMedicinesSelected />;
-  }
 
   const strength = seledtedDrugs.styrka.charAt(seledtedDrugs.styrka.length - 5);
   const ml = DoseInMl(seledtedDrugs);
@@ -55,13 +46,12 @@ const ListSlectedDrugsScreen = ({route}) => {
     </>
   );
 };
-
-export default ListSlectedDrugsScreen;
+export default DrugDetails.js;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+    // alignItems: "center",
     marginVertical: 9,
     marginHorizontal: 22,
   },
